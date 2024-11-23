@@ -245,6 +245,7 @@ st.write("Explore the distribution of studies across countries and analyze the a
 
 # Load dataset from the Excel file directly
 data_file = 'DataModels.xlsx'
+sheet_name = 'ArticleInfo' 
 try:
     data = pd.read_excel(data_file)
     sheet_name = 'ArticleInfo' 
