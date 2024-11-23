@@ -34,29 +34,20 @@ This Streamlit app models methane (CH₄) emissions in shrimp ponds based on sev
 """)
 
 st.subheader("What is Methane?")
-st.write("Methane (CH₄) is a potent greenhouse gas that is colorless, odorless, and highly effective at trapping heat in the atmosphere. It is produced naturally in wetlands, through the digestion of certain organisms, and through human activities such as agriculture, fossil fuel extraction, and waste management [1].")
+st.write("Methane (CH₄) is a potent greenhouse gas (GHG) that is colorless, odorless, and highly efficient at trapping heat in the atmospheric. It is produced naturally in wetlands, as a byproduct of the digestion of certain organisms, and through human activities such as agriculture, fossil fuel extraction, and waste management [1].")
 st.image("image1.png", caption="Figure 1: Methane (CH4)")
 
-st.subheader("What is the impact on the world?")
-st.write("Methane has a significant impact on global warming due to its high heat-trapping ability—over 25 times more potent than carbon dioxide over a 100-year period. Although methane is present in smaller amounts in the atmosphere than carbon dioxide, it has a much stronger warming effect and contributes heavily to climate change [2].")
-
-st.subheader("What is the role of livestock and aquaculture in methane emissions?")
-st.write("Livestock, especially ruminants like cattle, produce methane during digestion. Additionally, manure management in agriculture contributes to methane release. In aquaculture, methane emissions arise from organic matter decomposition in pond systems, particularly where stagnant water and nutrient-rich sediments provide ideal conditions for methane-producing microbes [3].")
+st.subheader("What role do livestock and aquaculture play in methane emissions?")
+st.write("Livestock and aquaculture are significant contributors to global emissions of CH₄, CO₂, and N₂O. However, when considering protein production, aquaculture has a lower emission intensity compared to livestock [2]. The relatively low emissions values in aquaculture are primarily due to the lack of enteric methane (CH₄) production and the high fertility and low feed conversion ratios of finfish, crustaceans, and shellfish. This makes aquaculture a more biologically efficient method of producing animal protein compared to terrestrial livestock, especially ruminants [3].")
 st.image("image2.png", caption="Figure 2: World production of capture fisheries, aquaculture and pig, chicken and cattle meat from 1961 to 2017.")
 
-st.subheader("What can be done to mitigate methane emissions?")
-st.write("To mitigate methane emissions, various strategies can be implemented, including optimizing animal feed to reduce enteric methane in livestock, improving manure management practices, and using alternative water management practices in aquaculture ponds to reduce methane production [4].")
-
 st.subheader("Which aquaculture practices emit the most methane?")
-st.write("Among aquaculture species, methane emissions are particularly associated with pond-based systems for fish and crustaceans, where anaerobic conditions in pond sediment promote methane production. Methane emissions are lower in mollusk farming as they require less organic input and are often grown in open, well-aerated environments [5].")
-
-st.subheader("Which farming system impacts methane emissions the most?")
-st.write("Pond systems have the highest methane emissions due to organic matter accumulation and anaerobic conditions in the sediment. In contrast, net cage systems, raceways, and recirculating systems tend to have lower emissions due to water movement, better oxygenation, and reduced organic buildup [6].")
+st.write("Among aquaculture farming practices, GHG emissions vary based on the farming system, water type, species, production intensity, and water parameters. Crustacean and fish pond-based systems are the leading producers of CH₄. In shrimp ponds, CH₄ is mainly produced in the sediment, where organic waste, uneaten feed, and feces accumulate. Under anaerobic conditions, microorganisms in the sediment decompose this organic matter, generating methane as a byproduct [4].")
 st.image("image3.png", caption="Figure 3: Example of shrimp pond.")
 
-st.subheader("In shrimp (crustacean ponds), where does methane come from?")
-st.write("In shrimp ponds, methane is primarily generated in the sediment, where organic waste, uneaten feed, and feces accumulate. Under anaerobic conditions, microbes in the sediment break down this organic matter, producing methane as a byproduct [7].")
-st.image("image7.png", caption="Figure 4: Explanation on methane production and emission in shrimp ponds (Tan et al.2023).")
+st.subheader("Where does methane come from in shrimp (crustacean) ponds?")
+st.write("Methane emissions in aquaculture ponds result from the decomposition of organic matter, including uneaten feed, feces, and decaying phytoplankton and zooplankton, which settle in the pond sediment. Under anaerobic conditions, methanogenic archaea and bacteria convert this organic matter into methane (CH₄), alongside intermediate byproducts such as CO₂, NH₃, and H₂S. Key environmental factors like temperature, dissolved oxygen (DO), pH, salinity, and nitrogen influence microbial activity and the rate of methane production. Methane is released to the atmosphere via diffusion or ebullition, highlighting the importance of aquaculture practices and water quality management in mitigating greenhouse gas emissions.")
+st.image("image7.png", caption="Figure 4: Explanation on methane production and emission in shrimp ponds [5].")
 
 st.subheader("Description of the three crustacean species in this model")
 st.image("image4.png", caption="Figure 5: Whiteleg shrimp.")
@@ -67,7 +58,7 @@ st.write("""
 **Commercial Importance**: 5.5 million tons (2023)  
 **Top 3 producers in 2023**: China, India, and Ecuador  
 **Production Cycle**: 3–4 months  
-**Important Characteristics**: High adaptability, resilience to various salinities, rapid growth, high feed conversion efficiency, quality meat [8].
+**Important Characteristics**: High adaptability, resilience to various salinities, rapid growth, high feed conversion efficiency, and good meat [8].
 """)
 
 st.image("image5.png", caption="Figure 6: Black tiger shrimp.")
@@ -78,7 +69,7 @@ st.write("""
 **Commercial Importance**: 0.9 million tons (2023)  
 **Top 3 producers in 2023**: Vietnam, Thailand, and Indonesia  
 **Production Cycle**: 4–5 months  
-**Important Characteristics**: Good disease resistance, robust in high salinity, large size potential, good meat quality, high market value [9].  
+**Important Characteristics**: High disease resistance, robust in high salinity, growth potential, good meat quality, and high market value [7].  
 """)
 
 st.image("image6.png", caption="Figure 7: Chinese Mitten Crab.")
@@ -89,12 +80,12 @@ st.write("""
 **Commercial Importance**: 0.5 million tons (2023)  
 **Top 3 producers in 2023**: China, South Korea, and Japan  
 **Production Cycle**: 6–8 months  
-**Important Characteristics**: High market value, adaptability to low salinity, resilience in fluctuating conditions, strong burrowing behavior, quality meat [10].  
+**Important Characteristics**: High market value, adaptability to low salinity, resilience in fluctuating conditions, strong burrowing behavior, quality meat [8].  
 """)
 
 # Environmental Conditions Table
 st.subheader("Environmental Conditions")
-st.write("""Table 1: Ideal water parameters for the aquaculture species""")
+st.write("""Table 1: Ideal water parameters for the crustacean species""")
 data = {
     "Parameter": [
         "Temperature (°C)", "Salinity (ppt)", "pH", "Dissolved Oxygen (DO, mg/L)", "Total Nitrogen (TN, µg/L)",
@@ -110,16 +101,16 @@ st.dataframe(df)
 
 st.subheader("Impact on CH₄ flux")
 st.write("""
-- **Temperature**: Higher temperatures increase microbial metabolic rates in pond sediments, accelerating the decomposition of organic matter and enhancing methane production.  
-- **Total Organic Carbon (TOC)**: Higher TOC levels provide more fuel for anaerobic bacteria, increasing methane production.  
-- **Salinity**: Elevated salinity generally suppresses methane production because saline conditions can inhibit methanogenic microbes.  
+- **Temperature**: Higher temperatures increase microbial metabolic rates in pond sediments, accelerating the organic matter decomposition and increasing methane production.  
+- **Total Organic Carbon (TOC)**: Higher TOC levels provide more fuel for methanogenic microorganisms, increasing methane production.  
+- **Salinity**: Elevated salinity generally suppresses methane production because saline conditions can inhibit methanogenic microorganisms.  
 - **Nitrogen**: Nitrogen compounds can affect methane flux by impacting microbial communities in the sediment.  
 - **Dissolved Oxygen (DO)**: Higher DO levels suppress CH₄ flux by reducing anaerobic zones in pond sediments.  
-- **pH**: Methanogens prefer a neutral to slightly alkaline pH. Extreme pH levels can inhibit these microbes.  
+- **pH**: Methanogens prefer a neutral to slightly alkaline pH. Extreme pH levels can inhibit these microorganisms.  
 """)
 
 st.subheader("Goals of this app and project")
-st.write("This app aims to model methane emissions in shrimp aquaculture systems and examine how various environmental parameters affect methane flux.")
+st.write("This app aims to model methane emissions in shrimp (or crab) pond systems and examine how various environmental parameters affect methane flux.")
 
 st.subheader("Now let’s predict the methane emissions from shrimp (or crabs) ponds:")
 st.write("""
@@ -233,33 +224,30 @@ Each variable reflects environmental conditions impacting microbial metabolism a
 
 """)
 
-st.subheader("Why these parameters?")
-st.write("The correlation matrix indicates that methane emissions (CH₄) in shrimp ponds are influenced by several environmental factors. Total Organic Carbon (TOC) shows a strong positive correlation with CH₄ (0.67), suggesting that higher levels of organic matter drive methane production by fueling microbial activity. Dissolved Oxygen (DO) has a moderately negative correlation (-0.57) with CH₄, as higher oxygen levels inhibit methane production due to reduced anaerobic conditions. Salinity also negatively correlates with CH₄ (-0.31), indicating that higher salinity levels may inhibit methane-producing microbes. Nitrogen (measured as NO₃) has a weak positive correlation (0.23) with CH₄, suggesting a minor influence on methane production, possibly due to its indirect effects on microbial communities. pH shows a moderate positive correlation (0.40) with CH₄, indicating that slightly alkaline conditions may favor methane-producing organisms. Temperature, however, has a negligible correlation with CH₄ emissions, suggesting it may not be a primary driver in these specific conditions. Overall, TOC and DO emerge as the most influential factors in methane emissions, with salinity, pH, and nitrogen playing smaller roles.")
-st.image("image8.png", caption="Figure 8: Pearson correlation matrix for selected factors in methane emissions in dataset")
-
 # Section: Dataset Origin and Details
 st.title("This section provides insights into the dataset used in the methane emission model. ")
 st.subheader("Dataset Origin and Composition")
 st.write("The dataset used in this model analysis was compiled from a variety of sources to provide comprehensive methane emission data across aquaculture studies. Here are key details:")
 
 st.markdown("""
-- **Number of Articles**: 51
+- **Number of Articles**: 71
 - **Geographic Coverage**: Asia and South America
 - **Species Covered**: 
-    - *Litopenaeus vannamei* (Whiteleg Shrimp): 25
-    - *Penaeus monodon* (Black Tiger Shrimp): 17
-    - *Eriocheir sinensis* (Chinese Mitten Crab): 2
-    - Articles that didn't specify a species: 7
+    - *Litopenaeus vannamei* (Whiteleg Shrimp): 38
+    - *Penaeus monodon* (Black Tiger Shrimp): 2
+    - *Eriocheir sinensis* (Chinese Mitten Crab): 24
+    - Other species: 7
 
 This dataset reflects data from various regions and species, allowing for a robust model to analyze methane emissions across different aquaculture conditions.
 """)
 
-st.write("You can explore the distribution of studies across countries and analyze the number of studies per year.")
+st.write("Explore the distribution of studies across countries and analyze the annual trsnds in study counts.")
 
 # Load dataset from the Excel file directly
 data_file = 'DataModels.xlsx'
 try:
     data = pd.read_excel(data_file)
+    sheet_name = 'ArticleInfo' 
 
     # Ensure data is a DataFrame and check for correct column names
     if not isinstance(data, pd.DataFrame):
@@ -318,25 +306,21 @@ st.markdown("""
 <div class="reference-text">
 
 
-1. Runkov, R. A., & Ilyasov, D. V. (2023). Spatial variability of methane emissions from soils of wet forests: A brief review. *Environmental Dynamics and Global Climate Change*, 14(3), 167–180. https://doi.org/10.18822/edgcc375293  
+1. Runkov, R. A., & Ilyasov, D. V. (2024). Spatial variability of methane emissions from soils of wet forests: A brief review. *Environmental Dynamics and Global Climate Change*, 14(3), 167–180. https://doi.org/10.18822/edgcc375293  
 
-2. Thakur, S., & Solanki, H. (2022). Role of methane in climate change and options for mitigation: A brief review. *International Association of Biologicals and Computational Digest*, 1(2), 275–287.  
+2. Dong, H., Zhao, Y., Lu, X., Cai, Y., Yang, J., He, M., ... & Zhang, X. (2023). Quantifying methane emissions from aquaculture ponds in China. *Environmental Science & Technology*. https://doi.org/10.1021/acs.est.2c05218  
 
-3. Yuan, J., Liu, D., Xiang, J., He, T., Kang, H., & Ding, W. (2021). Methane and nitrous oxide have separated production zones and distinct emission pathways in freshwater aquaculture ponds. *Water Research*, 190, 116739. https://doi.org/10.1016/j.watres.2020.116739  
+3.  MacLeod, M. J., Hasan, M. R., Robb, D. H. F., & Mamun-Ur-Rashid, M. (2020). Quantifying greenhouse gas emissions from global aquaculture. Scientific Reports, 10(1), 11679. https://doi.org/10.1038/s41598-020-68231-8
 
-4. Dong, H., Zhao, Y., Lu, X., Cai, Y., Yang, J., He, M., ... & Zhang, X. (2022). Quantifying methane emissions from aquaculture ponds in China. *Environmental Science & Technology*. https://doi.org/10.1021/acs.est.2c05218  
+4. Yang, P., Lai, D. Y. F., Yang, H., Tong, C., Lebel, L., Huang, J., & Xu, J. (2019). Methane dynamics of aquaculture shrimp ponds in two subtropical estuaries, southeast China: Dissolved concentration, net sediment release, and water oxidation. *Journal of Geophysical Research: Biogeosciences*, 124(6), 1430–1445. https://doi.org/10.1029/2018JG004794  
 
-5. Prathap, P., Chauhan, S. S., Leury, B. J., Cottrell, J. J., & Dunshea, F. R. (2021). Towards sustainable livestock production: Estimation of methane emissions and dietary interventions for mitigation. *Sustainability*, 13(11), 6081. https://doi.org/10.3390/su13116081  
+5. Tan, J., Lichtfouse, E., Luo, M., Liu, Y., Tan, F., Zhang, C., Chen, X., Huang, J., & Xiao, L. (2023). Aquaculture drastically increases methane production by favoring acetoclastic rather than hydrogenotrophic methanogenesis in shrimp pond sediments. Aquaculture, 563, 738999. https://doi.org/10.1016/j.aquaculture.2022.738999
+ 
+6. Dugassa, H., & Gaetan, D. G. (2018). Biology of white leg shrimp, *Penaeus vannamei*: Review. *World Journal of Fish and Marine Sciences*, 10(2), 5–17. https://doi.org/10.5829/idosi.wjfms.2018.05.17  
 
-6. Fang, X., Zhao, J., Wu, S., Yu, K., Huang, J., Ding, Y., & Zou, J. (2022). A two-year measurement of methane and nitrous oxide emissions from freshwater aquaculture ponds: Affected by aquaculture species, stocking and water management. *Science of the Total Environment*, 813, 151863. https://doi.org/10.1016/j.scitotenv.2021.151863  
+7. Alfaro-Montoya, J., Monge-Ortiz, A. M., Martínez-Fernández, D., & Herrera-Quesada, E. (2015). First record of the nonindigenous *Penaeus monodon* Fabricius, 1798 (*Penaeidae*) in the Caribbean Sea of Costa Rica, Central America, with observations on selected aspects of its reproductive biology. *BioInvasions Records*, 4(3), 217–222. https://doi.org/10.3391/bir.2015.4.3.11  
 
-7. Yang, P., Lai, D. Y. F., Yang, H., Tong, C., Lebel, L., Huang, J., & Xu, J. (2019). Methane dynamics of aquaculture shrimp ponds in two subtropical estuaries, southeast China: Dissolved concentration, net sediment release, and water oxidation. *Journal of Geophysical Research: Biogeosciences*, 124(6), 1430–1445. https://doi.org/10.1029/2018JG004794  
-
-8. Dugassa, H., & Gaetan, D. G. (2018). Biology of white leg shrimp, *Penaeus vannamei*: Review. *World Journal of Fish and Marine Sciences*, 10(2), 5–17. https://doi.org/10.5829/idosi.wjfms.2018.05.17  
-
-9. Alfaro-Montoya, J., Monge-Ortiz, A. M., Martínez-Fernández, D., & Herrera-Quesada, E. (2015). First record of the nonindigenous *Penaeus monodon* Fabricius, 1798 (*Penaeidae*) in the Caribbean Sea of Costa Rica, Central America, with observations on selected aspects of its reproductive biology. *BioInvasions Records*, 4(3), 217–222. https://doi.org/10.3391/bir.2015.4.3.11  
-
-10. Veilleux, É., & de Lafontaine, Y. (2007). Biological synopsis of the Chinese mitten crab (*Eriocheir sinensis*). *Canadian Manuscript Report of Fisheries and Aquatic Sciences*, 2812, vi + 45.
+8. Veilleux, É., & de Lafontaine, Y. (2007). Biological synopsis of the Chinese mitten crab (*Eriocheir sinensis*). *Canadian Manuscript Report of Fisheries and Aquatic Sciences*, 2812, vi + 45.
 </div>
 """, unsafe_allow_html=True)
 
