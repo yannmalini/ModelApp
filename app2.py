@@ -126,7 +126,7 @@ def methane_emission_model(alpha, beta_1, beta_2, beta_3, beta_4, beta_5, beta_6
     methane_flux = (
         alpha 
         * np.exp(np.clip(beta_1 * temp, -50, 50))          # Temperature effect
-        * (np.clip(TOC, 1e-10, None) ** beta_2)             # TOC effect
+        * (np.clip(TOC, 5, None) ** beta_2)             # TOC effect
         * (np.clip(salinity, 1e-10, None) ** beta_3)        # Salinity effect
         * np.exp(np.clip(-beta_4 * nitrogen, -50, 50))      # Nitrogen effect
         / np.exp(np.clip(beta_5 * DO, -50, 50))             # DO effect (now beta_5 = -0.01)
@@ -137,7 +137,7 @@ def methane_emission_model(alpha, beta_1, beta_2, beta_3, beta_4, beta_5, beta_6
 # Set default model parameters
 alpha = 1.0
 beta_1 = 0.1
-beta_2 = 0.5
+beta_2 = 1.0
 beta_3 = -0.5
 beta_4 = 0.01
 beta_5 = -0.01  # Updated to -0.01 as specified
