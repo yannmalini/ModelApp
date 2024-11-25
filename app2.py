@@ -9,7 +9,7 @@ st.markdown(
     """
     <style>
     .main {
-        background-color: #E0F7FA; /* Light blue background */
+        background-color: #90CAF9; /* Light blue background */
     }
     .css-18e3th9 {
         font-size: 14px; /* Adjust default font size */
